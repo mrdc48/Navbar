@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>
+      How to make Responsive navigation for all screens resolution ?
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- The Whole Nav is based upon BEM technique -->
+    <section class="Navbar">
+      <nav class="Navbar__MainNavigation">
+        <div class="tail">
+          <div class="hamburger_menu">
+            <div class="bar bar_1"></div>
+            <div class="bar bar_3"></div>
+          </div>
+          <!-- <img src="SD.png" alt="" class="tail__Logo" /> -->
+        </div>
+        <div class="MainNavigation__Links">
+          <a class="MainNavigation__Links-URl" href="">DC</a>
+          <a class="MainNavigation__Links-URl" href="">Home</a>
+          <a class="MainNavigation__Links-URl" href="">Products</a>
+          <a class="MainNavigation__Links-URl" href="">Services</a>
+          <a class="MainNavigation__Links-URl" href="">Support</a>
+          <a class="MainNavigation__Links-URl" href="">About Us</a>
+        </div>
+      </nav>
+    </section>
+    <section></section>
+
+    <script>
+      const menuBtn = document.querySelector(".hamburger_menu");
+      navData = document.querySelector(".MainNavigation__Links");
+      let data_1 = document.querySelector(".bar_1");
+      let data_2 = document.querySelector(".bar_2");
+      let data_3 = document.querySelector(".bar_3");
+      menuBtn.addEventListener("click", () => {
+        navData.classList.toggle("show");
+        data_1.classList.toggle("first_line");
+        data_3.classList.toggle("third_line");
+      });
+    </script>
+  </body>
+</html>
