@@ -4,50 +4,40 @@
     <title>Home</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="theme-color" content="#f5f5f7" />
-    <script
-      src="https://kit.fontawesome.com/58c1992db0.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>
-      How to make Responsive navigation for all screens resolution ?
-    </title>
+    <!--
+An Dc Group initiate....
+    -->
     <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
   </head>
   <body>
-    <!-- The Whole Nav is based upon BEM technique -->
-    <section class="Navbar">
-      <nav class="Navbar__MainNavigation">
-        <div class="tail">
-          <div class="hamburger_menu">
-            <div class="bar bar_1"></div>
-            <div class="bar bar_3"></div>
+      <div class="Navbar">
+        <div class="HamburgerMenu">
+          <div id="burger">
+            <div class="bar topBar"></div>
+            <div class="bar btmBar"></div>
           </div>
-          <i class="fa fa-regular fa-user fa-2x"></i>
         </div>
-        <div class="MainNavigation__Links">
-          <a class="MainNavigation__Links-URl" href="">DC</a>
-          <a class="MainNavigation__Links-URl" href="">Home</a>
-          <a class="MainNavigation__Links-URl" href="">Products</a>
-          <a class="MainNavigation__Links-URl" href="">Services</a>
-          <a class="MainNavigation__Links-URl" href="">Support</a>
-          <a class="MainNavigation__Links-URl" href="">About Us</a>
-        </div>
-      </nav>
-    </section>
-    <section style="margin-top: 70px"></section>
-
+        <ul class="Navtabs">
+          <li class="menuLinks"><a href="#">Home</a></li>
+          <li class="menuLinks"><a href="#">Products</a></li>
+          <li class="menuLinks"><a href="#">Servcies</a></li>
+          <li class="menuLinks"><a href="#">Support</a></li>
+          <li class="menuLinks"><a href="#">About Us</a></li>
+          <li class="menuLinks"><a href="#">Carrier</a></li>
+        </ul>
+      </div>
+    </div>
+    <div>
     <script>
-      const menuBtn = document.querySelector(".hamburger_menu");
-      navData = document.querySelector(".MainNavigation__Links");
-      let data_1 = document.querySelector(".bar_1");
-      let data_2 = document.querySelector(".bar_2");
-      let data_3 = document.querySelector(".bar_3");
-      menuBtn.addEventListener("click", () => {
-        navData.classList.toggle("show");
-        data_1.classList.toggle("first_line");
-        data_3.classList.toggle("third_line");
-      });
+      (function () {
+        var burger = document.querySelector('.HamburgerMenu'),
+          Navbar = document.querySelector('.Navbar');
+
+        burger.onclick = function () {
+          Navbar.classList.toggle('menu-opened');
+        };
+      })();
     </script>
   </body>
 </html>
