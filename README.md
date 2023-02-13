@@ -1,2 +1,2 @@
-### ** Modern Navigation Menu **
-## https://mrdc48.github.io/Navbar/
+** Modern Navigation Menu **
+## Click here (https://mrdc48.github.io/Navbar/)
